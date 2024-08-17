@@ -7,13 +7,6 @@ class Store:
     def add_item(self, item_name, price): #Добавляет товар и его цену в словарь items
         self.items[item_name] = price
 
-    def remove_item(self, item_name): #Удаляет товар из словаря items
-        if item_name in self.items:
-            del self.items[item_name]
-            print(f"Товар '{item_name}' удален из магазина.")
-        else:
-            print(f"Товар '{item_name}' не найден в магазине.")
-
     def get_item_price(self, item_name): #Возвращает цену товара, если он есть в словаре, иначе None
         return self.items.get(item_name)
 
